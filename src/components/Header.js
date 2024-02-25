@@ -4,7 +4,6 @@ import img3 from "../assets/images/img3.jpg";
 import { toggleMenu } from "../utils/appSlice";
 import { useEffect, useState } from "react";
 import { SEARCH_API } from "../constants";
-import { json } from "react-router-dom";
 import { cacheResults } from "../utils/searchSlice";
 
 const Header = () => {
@@ -31,10 +30,10 @@ const Header = () => {
   }, [searchQuery]);
   
   const getSearchSuggestions = async () => {
-    console.log("Api call " + searchQuery);
+    // console.log("Api call " + searchQuery);
     const data = await fetch(SEARCH_API + searchQuery);
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setSuggestions(json[1]);
     // update cache 
     dispatch(

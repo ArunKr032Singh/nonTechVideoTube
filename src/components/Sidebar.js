@@ -9,7 +9,7 @@ const Sidebar = () => {
     <div className='p-5 shadow-lg w-48'>
       <ul>
         <Link to="/"><li>Home</li></Link>
-        <li>Music</li>
+        <li>Nisha Singh</li>
         <li>Music</li>
         <li>Music</li>
       </ul>
